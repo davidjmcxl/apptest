@@ -1,0 +1,7 @@
+{
+  "name": "lookApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
