@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Dectector de Texto
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,6 +12,15 @@
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div>
+    <video #video width="100%" height="600px"></video>
+    <button (click)="captureImage()">Capture Image</button>
+    <canvas #canvas width="320" height="240" style="display: none;"></canvas>
+    <div *ngIf="isLoading">Loading...</div>
+    <div *ngIf="text">
+      <h3>Recognized Text:</h3>
+      <p>{{ text }}</p>
+    </div>
+  </div>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>
